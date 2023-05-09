@@ -19,7 +19,6 @@ Como meu sistema e Linux irei seguir outros passos a seguinte:
 
 Caso nao tenha o python na maquina basta seguir
 
-````````sudo apt-get update`````
 ``sudo apt-get update && sudo apt-get install python3 && sudo apt install python3-pip``
 
 Agora instale o AWS CLI usando ambiente virtual.
