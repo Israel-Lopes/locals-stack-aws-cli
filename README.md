@@ -115,6 +115,20 @@ Isso retornará uma lista dos buckets disponíveis na sua conta da AWS.
 Cada serviço da AWS tem seus próprios comandos e opções específicas que podem
 ser exploradas na documentação oficial da AWS CLI.
 
+Vamos agora criar um bucket para demostração de utilização
+
+``aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket-to-test``
+
+Se você quiser pode subistituir o nome "my-bucket-to-test" para nome do bucket que queira.
+
+Ao criar bucket ele retornara a mensagem "make_bucket: my-bucket-to-test" na saida do prompt.
+
+Agora podemos listar nosso bucket:
+
+``aws --endpoint-url=http://localhost:4566 s3 ls``
+
+ira retornar "2023-05-09 12:15:00 my-bucket-to-test"
+
 ## Finish
 
 Lembre-se que sempre ao executar deve se primeiro carregar ambiente vitual e rodar o container:
