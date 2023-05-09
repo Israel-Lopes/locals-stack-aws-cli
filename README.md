@@ -13,7 +13,7 @@ que instalar o ***AWS CLI*** sigamos abaixo:
 
 Instale o AWS CLI usando um método apropriado para o seu sistema operacional.
 
-![download aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html#cli-configure-quickstart-install
+[download aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html#cli-configure-quickstart-install
 
 Como meu sistema e Linux irei seguir outros passos a seguinte:
 
