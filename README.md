@@ -60,6 +60,17 @@ executar o seguinte comando no terminal:
 
 ``docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack``
 
+Ao executar o comando se ele retornar essas informaçoes signifca que esta roando:
+
+`
+LocalStack version: 2.0.3.dev
+LocalStack build date: 2023-05-06
+LocalStack build git hash: 3e778577
+
+2023-05-09T14:59:48.980  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2023-05-09T14:59:48.980  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+Ready.
+`
 Isso iniciará o contêiner LocalStack e exporá as portas 4566 e 4571,
 que são usadas para acessar os serviços simulados.
 
@@ -103,4 +114,12 @@ Isso retornará uma lista dos buckets disponíveis na sua conta da AWS.
 
 Cada serviço da AWS tem seus próprios comandos e opções específicas que podem
 ser exploradas na documentação oficial da AWS CLI.
+
+## Finish
+
+Lembre-se que sempre ao executar deve se primeiro carregar ambiente vitual e rodar o container:
+
+``source venv/bin/activate``
+
+``docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack``
 
