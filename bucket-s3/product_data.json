@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "001",
+      "name": "Apple",
+      "category": "Fruits",
+      "price": 0.99,
+      "quantity": 50
+    },
+    {
+      "id": "002",
+      "name": "Milk",
+      "category": "Dairy",
+      "price": 2.49,
+      "quantity": 20
+    },
+    {
+      "id": "003",
+      "name": "Bread",
+      "category": "Bakery",
+      "price": 1.99,
+      "quantity": 30
+    },
+    {
+      "id": "004",
+      "name": "Eggs",
+      "category": "Dairy",
+      "price": 3.99,
+      "quantity": 40
+    },
+    {
+      "id": "005",
+      "name": "Chicken",
+      "category": "Meat",
+      "price": 5.99,
+      "quantity": 10
+    }
+  ]
+}
