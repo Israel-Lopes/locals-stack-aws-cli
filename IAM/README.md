@@ -102,6 +102,3 @@ Agora vamos deletar o usuario Luis:
 
 Aprendemos aqui a criar usuarios, setar politicas de acessos, removelas e deletar usuarios.
 Existem mais funcionalidades que o IAM pode oferecer, porem apresentei apenas as basicas.
-
-
-
