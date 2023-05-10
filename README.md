@@ -1,7 +1,7 @@
 # Simulando AWS CLI com LocalStack
 
 1. IAM (Identity and Access Management)
-2. S3 (Simple Storage Service)
+2. [S3 (Simple Storage Service)](bucket-s3/README.md)
 3. EC2 (Elastic Compute Cloud)
 4. Lambda
 5. DynamoDB
@@ -59,7 +59,6 @@ conflitos de dependencias.
 
 ``pip install awscli``
 
-
 Lembre-se de que, sempre que precisar usar a AWS CLI, você primeiro precisará ativar o 
 ambiente virtual usando o comando ``source venv/bin/activate``.
 
@@ -75,7 +74,6 @@ executar o seguinte comando no terminal:
 ``docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack``
 
 Ao executar o comando se ele retornar essas informaçoes signifca que esta roando:
-
 `
 LocalStack version: 2.0.3.dev
 LocalStack build date: 2023-05-06
