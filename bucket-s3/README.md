@@ -24,7 +24,11 @@ Para facilitar o aprendizado e fica semelhante ao serviço da amazon, vamos cria
 
 Dentro dou seu .bashrc ou outro de preferencia, cole o seguinet codigo.
 
-``alias aws="aws --endpoint-url=http://localhost:4566"``
+```
+# Para sobrescrever aws-cli
+source /home/oem/Workspace/myenv/venv/bin/activate
+alias aws="aws --endpoint-url=http://localhost:4566"
+```
 
 Nao se esqueça tambem de carregar o arquivo: ``source ~/.bashrc``
 
