@@ -1,5 +1,19 @@
 # Simulando AWS CLI com LocalStack
 
+1. IAM (Identity and Access Management)
+2. S3 (Simple Storage Service)
+3. EC2 (Elastic Compute Cloud)
+4. Lambda
+5. DynamoDB
+6. API Gateway
+7. CloudFormation
+8. CloudWatch
+9. SQS (Simple Queue Service)
+10. SNS (Simple Notification Service)
+11. Elastic Beanstalk
+12. KMS (Key Management Service)
+13. Cognito
+
 Dependencias:
 
  - AWS CLI
