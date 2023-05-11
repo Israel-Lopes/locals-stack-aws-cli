@@ -3,7 +3,7 @@
 1. [IAM (Identity and Access Management)](IAM/README.md)
 2. [S3 (Simple Storage Service)](bucket-s3/README.md)
 3. [EC2 (Elastic Compute Cloud)](EC2/README.md)
-4. Lambda
+4. [Lambda](lambda/README.md)
 5. DynamoDB
 6. API Gateway
 7. CloudFormation
