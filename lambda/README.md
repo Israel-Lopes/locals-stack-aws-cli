@@ -127,4 +127,5 @@ dando permissao. Nele devemos preencher com o ***ARN***.
 3. --handler: Deve especificar nome da classe e metodo.
 4. --code: Especifique o bucket onde jar esta e nome do jar.
 
-
+Agora com tudo terminado basta que o trigger seja assionado para que a função
+lambda se inicie.
