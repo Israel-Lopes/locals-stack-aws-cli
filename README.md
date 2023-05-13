@@ -4,7 +4,7 @@
 2. [S3 (Simple Storage Service)](bucket-s3/README.md)
 3. [EC2 (Elastic Compute Cloud)](EC2/README.md)
 4. [Lambda](lambda/README.md)
-5. DynamoDB
+5. [DynamoDB](dynamoDB/README.md)
 6. API Gateway
 7. CloudFormation
 8. CloudWatch
