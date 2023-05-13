@@ -5,7 +5,7 @@
 3. [EC2 (Elastic Compute Cloud)](EC2/README.md)
 4. [Lambda](lambda/README.md)
 5. [DynamoDB](dynamoDB/README.md)
-6. API Gateway
+6. [API Gateway](api-gateway/README.md)
 7. CloudFormation
 8. CloudWatch
 9. SQS (Simple Queue Service)
