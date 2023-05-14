@@ -7,7 +7,7 @@
 5. [DynamoDB](dynamoDB/README.md)
 6. [API Gateway](api-gateway/README.md)
 7. [CloudFormation](cloud-formation/README.md)
-8. CloudWatch
+8. [CloudWatch](cloud-watch/README.md)
 9. SQS (Simple Queue Service)
 10. SNS (Simple Notification Service)
 11. Elastic Beanstalk
