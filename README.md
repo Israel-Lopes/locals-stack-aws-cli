@@ -8,7 +8,7 @@
 6. [API Gateway](api-gateway/README.md)
 7. [CloudFormation](cloud-formation/README.md)
 8. [CloudWatch](cloud-watch/README.md)
-9. SQS (Simple Queue Service)
+9. [SQS (Simple Queue Service)](SQS/README.md)
 10. SNS (Simple Notification Service)
 11. Elastic Beanstalk
 12. KMS (Key Management Service)
