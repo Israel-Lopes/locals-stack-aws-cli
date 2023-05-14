@@ -1,15 +1,15 @@
 # Simulando AWS CLI com LocalStack
 
-1. [IAM (Identity and Access Management)](IAM/README.md)
-2. [S3 (Simple Storage Service)](bucket-s3/README.md)
-3. [EC2 (Elastic Compute Cloud)](EC2/README.md)
-4. [Lambda](lambda/README.md)
-5. [DynamoDB](dynamoDB/README.md)
-6. [API Gateway](api-gateway/README.md)
-7. [CloudFormation](cloud-formation/README.md)
-8. [CloudWatch](cloud-watch/README.md)
-9. [SQS (Simple Queue Service)](SQS/README.md)
-10. SNS (Simple Notification Service)
+1.  [IAM (Identity and Access Management)](IAM/README.md)
+2.  [S3 (Simple Storage Service)](bucket-s3/README.md)
+3.  [EC2 (Elastic Compute Cloud)](EC2/README.md)
+4.  [Lambda](lambda/README.md)
+5.  [DynamoDB](dynamoDB/README.md)
+6.  [API Gateway](api-gateway/README.md)
+7.  [CloudFormation](cloud-formation/README.md)
+8.  [CloudWatch](cloud-watch/README.md)
+9.  [SQS (Simple Queue Service)](SQS/README.md)
+10. [SNS (Simple Notification Service)](SNS/README.md)
 11. Elastic Beanstalk
 12. KMS (Key Management Service)
 13. Cognito
