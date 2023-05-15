@@ -5,7 +5,7 @@ de aplicativos de forma automatizada em diferentes ambientes, como instâncias d
 serviços do ECS (Elastic Container Service), servidores locais ou até mesmo em instâncias 
 do Lambda.
 
-Iremaos agora criar nossa implantação.
+Iremos agora criar nossa implantação.
 
 Crie um grupo de implantação: Um grupo de implantação é uma coleção lógica de instâncias do 
 Amazon EC2 nas quais você deseja implantar seu aplicativo. Use o seguinte comando para criar 
