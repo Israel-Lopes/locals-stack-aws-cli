@@ -12,7 +12,7 @@
 10. [SNS (Simple Notification Service)](SNS/README.md)
 11. [CodeCommit](code-commit/README.md)
 12. [CodePipeline](code-pipeline/README.md)
-13. CodeBuild
+13. [CodeBuild](code-build/README.md)
 14. CodeDeploy
 15. [KMS (Key Management Service)](key-management-service/README.md)
 16. [Cognito](cognito/README.md)
