@@ -10,9 +10,12 @@
 8.  [CloudWatch](cloud-watch/README.md)
 9.  [SQS (Simple Queue Service)](SQS/README.md)
 10. [SNS (Simple Notification Service)](SNS/README.md)
-11. Elastic Beanstalk
-12. KMS (Key Management Service)
-13. Cognito
+11. [CodeCommit](code-commit/README.md)
+12. [CodePipeline](code-pipeline/README.md)
+13. CodeBuild
+14. CodeDeploy
+15. [KMS (Key Management Service)](key-management-service/README.md)
+16. [Cognito](cognito/README.md)
 
 Dependencias:
 
