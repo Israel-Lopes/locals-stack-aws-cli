@@ -15,7 +15,7 @@ Dando continuidade vamos criar um arquivo de json de configuração que se chama
 
 Nele tera o conteudo:
 
-```
+```json
 {
   "name": "MyAPI",
   "description": "Minha API Gateway",
@@ -27,12 +27,14 @@ Nele tera o conteudo:
 ```
 Agora basta executar o comando:
 
-``aws apigatewayv2 create-api --cli-input-json file://api-config.json``
+```bash
+aws apigatewayv2 create-api --cli-input-json file://api-config.json
+```
 
 Isso ira criar a API Gateway com base nas configuracoes descritas no arquivo. Depois disso,
 devemos adicionar as rotas a API Gateway:
 
-```
+```json
 {
   "routes": [
     {
@@ -46,12 +48,12 @@ devemos adicionar as rotas a API Gateway:
   ]
 }
 ```
-Lembre-se de subistituir <INTEGRATION_ID> pelos IDs reais de integração que voce configurou
+Lembre-se de subistituir **<INTEGRATION_ID>** pelos IDs reais de integração que voce configurou
 para cada rota.
 
 Ficando ela dessa forma:
 
-```
+```json
 {
   "routes": [
     {
@@ -73,16 +75,19 @@ Ficando ela dessa forma:
   ]
 }
 ```
-1. routeKey:  Especifica o método HTTP e o caminho da rota. Por exemplo, "GET /resource" indica 
+
+1. **routeKey:**  Especifica o método HTTP e o caminho da rota. Por exemplo, "GET /resource" indica 
 que essa rota será acionada quando uma solicitação GET for feita para o caminho "/resource".
-2. target:  Indica o destino da rota, ou seja, para onde a solicitação será encaminhada.
+2. **target:**  Indica o destino da rota, ou seja, para onde a solicitação será encaminhada.
 
 
 Depois de tudo preenchido, devemos executar o comando para subir as configuracoes:
 
-``aws apigatewayv2 import-api --api-id <API_ID> --basepath <BASE_PATH> --body file://routes-config.json``
+```bash
+aws apigatewayv2 import-api --api-id <API_ID> --basepath <BASE_PATH> --body file://routes-config.json
+```
 
-Substitua <API_ID> pelo ID da API Gateway que você obteve na etapa anterior e <BASE_PATH> pelo 
+Substitua **<API_ID>** pelo ID da API Gateway que você obteve na etapa anterior e **<BASE_PATH>** pelo 
 caminho de base da API (por exemplo, /v1).
 
 Agora temos uma API Gateway criada e configurada com as rotas.
