@@ -129,7 +129,7 @@ Ao executar o comando caso obtenhamos sucesso, devemos receber a seguinte respos
     "Description": "",
     "Timeout": 3,
     "MemorySize": 128,
-    ...
+    Continua ...
 }
 ```
 1. **--runtime java11:** Estamos especificando que sera executado em java 11.
