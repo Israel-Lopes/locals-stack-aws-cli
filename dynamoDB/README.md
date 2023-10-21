@@ -13,7 +13,7 @@ Agora vamos aprender a criar nosso dynamoDB!
 
 Para criar uma tabela basta fazer o seguinte comando:
 
-```
+```bash
 aws dynamodb create-table \
     --table-name Orders \
     --attribute-definitions \
@@ -24,13 +24,17 @@ aws dynamodb create-table \
         AttributeName=sid,KeyType=RANGE \
     --provisioned-throughput \
         ReadCapacityUnits=5,WriteCapacityUnits=5 
-        ```
+```
+
 Agora se listarmos, poderemos ver que a Orders foi criada:
 
-``aws dynamodb list-tables``
+```bash
+aws dynamodb list-tables
+```
 
 Retorno:
-```
+
+```json
 {
     "TableNames": [
         "Orders"
@@ -39,10 +43,13 @@ Retorno:
 ```
 Vamos listar a tabela Orders agora:
 
-``aws dynamodb scan --table-name Orders``
+```bash
+aws dynamodb scan --table-name Orders
+```
 
 Retorno:
-```
+
+```json
 {
     "Items": [],
     "Count": 0,
@@ -54,7 +61,7 @@ Vamos aprender agora a utilizar o dynamo com java. Primeiro temos que criar um a
 configuração chamado ``credentials``, no linux ele deve ser criado no 
 diretorio ``~/.aws/credentials`` ou no mac OS.
 
-```
+```yaml
 [<profile_name>]
 aws_access_key_id = SUA_ACCESS_KEY_ID
 aws_secret_access_key = SUA_SECRET_ACCESS_KEY
@@ -62,7 +69,7 @@ aws_secret_access_key = SUA_SECRET_ACCESS_KEY
 O arquivo pode ter varios profiles configurados, basta separalos pulando uma linha.
 Ficando dessa forma:
 
-```
+```yaml
 [default]
 aws_access_key_id = SUA_ACCESS_KEY_ID_DEFAULT
 aws_secret_access_key = SUA_SECRET_ACCESS_KEY_DEFAULT
@@ -79,7 +86,8 @@ Vamos dar continuidade ao que estavamos fazendo.
 
 Voce deve preencher com suas credenciais e perfil, no meu exemplo o perfil irei por dev.
 Ficando da seguinte forma:
-```
+
+```yaml
 [dev]
 aws_access_key_id = **********
 aws_secret_access_key = *********
@@ -93,10 +101,15 @@ region = us-west-2
 ```
 Voce pode subistituir a regiao de acordo com sua preferencia.
 
-Agora podemos listar nosso profile: ``aws s3 ls --profile dev``
+Agora podemos listar nosso profile: 
+
+```bash
+aws s3 ls --profile dev
+```
 
 Implementando a classe para dynamo:
-```
+
+```java
 import software.amazon.awssdk.auth.credentials.*;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
@@ -145,8 +158,10 @@ public class DynamoDBExample {
     }
 }
 ```
-Import as dependencias ao ***pom.xml***
-```
+
+Import as dependencias ao **pom.xml**:
+
+```xml
 <dependencies>
     <dependency>
         <groupId>software.amazon.awssdk</groupId>
