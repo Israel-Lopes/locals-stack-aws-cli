@@ -34,13 +34,20 @@ de acesso para buckets do S3, instâncias do EC2, filas do SQS e muitos outros.
 
 Agora vamos aprender a criar nosso primeiro usuario no IAM, basta seguir o comando abaixo:
 
-``aws iam create-user --user-name <nome-do-usuario>``
+```bash
+aws iam create-user --user-name <nome-do-usuario>
+```
 
-Podemos agora listar nosso usuario: ``aws iam list-users``
+Podemos agora listar nosso usuario: 
+```bash
+aws iam list-users
+```
 
 Depois do usuario criado, agora podemos conceder acessos a ele. Segue exemplo:
 
-``aws iam attach-user-policy --user-name <nome-do-usuario> --policy-arn arn:aws:iam::aws:policy/MinhaPolitica``
+```bash
+aws iam attach-user-policy --user-name <nome-do-usuario> --policy-arn arn:aws:iam::aws:policy/MinhaPolitica
+```
 
 Substitua ``<nome-do-usuario>`` pelo nome do usuário que você criou e 
 ``arn:aws:iam::aws:policy/MinhaPolitica`` pelo ARN (Amazon Resource Name) da 
@@ -60,15 +67,19 @@ Abaixo segue uma lista de politicas mais comuns para por:
  Caso queira ver mais politicas acesse o link [politicas](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies)
 Proceguindo, quero dar acesso ao usuario Luis para ter acesso ao Dynamo, nesse caso:
 
-``aws iam attach-user-policy --user-name Luis --policy-arn arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess``
+```bash
+aws iam attach-user-policy --user-name Luis --policy-arn arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
+```
 
 Agora vamos litar os acessos do nosso usuario Luis:
 
-``aws iam list-attached-user-policies --user-name Luis``
+```bash
+aws iam list-attached-user-policies --user-name Luis
+```
 
 Ele ira retornar o seguinte:
 
-```
+```json
 {
     "AttachedPolicies": [
         {
@@ -81,11 +92,13 @@ Ele ira retornar o seguinte:
 Quero remover o acesso que eu avia dado ao usuario, como faz agora?
 Basta seguir o exemplo, vamos remover o acesso que acabos de dar ao Luis:
 
-``aws iam detach-user-policy --user-name Luis --policy-arn arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess``
+```bash
+aws iam detach-user-policy --user-name Luis --policy-arn arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
+```
 
 Listando os acesso do usuario, ele deve retornar:
 
-```
+```json
 {
     "AttachedPolicies": []
 }
@@ -96,7 +109,9 @@ Seguimos em frente agora.
 
 Agora vamos deletar o usuario Luis:
 
-``aws iam delete-user --user-name Luis``
+```bash
+aws iam delete-user --user-name Luis
+```
 
 ## Finish
 

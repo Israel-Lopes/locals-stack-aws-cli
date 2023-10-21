@@ -36,31 +36,49 @@ Como meu sistema e Linux irei seguir outros passos a seguinte:
 
 Caso nao tenha o python na maquina basta seguir
 
-``sudo apt-get update && sudo apt-get install python3 && sudo apt install python3-pip``
+```bash
+sudo apt-get update && sudo apt-get install python3 && sudo apt install python3-pip
+```
 
 Agora instale o AWS CLI usando ambiente virtual.
 
 Certifique-se de ter o pacote python3-venv instalado executando o seguinte comando:
 
-``sudo apt install python3-venv``
+```bash
+sudo apt install python3-venv
+```
 
 Crie um novo diretório onde você deseja criar o ambiente virtual. Por exemplo:
 
-``mkdir myenv``
+```bash
+mkdir myenv
+```
 
-Entre no diretorio ``cd myenv``
+Entre no diretorio:
 
-Crie um ambiente virtual usando o seguinte comando: ``python3 -m venv venv``
+```bash
+cd myenv
+```
+
+Crie um ambiente virtual usando o seguinte comando: 
+
+```bash
+python3 -m venv venv
+```
 
 Ative o ambiente virtual executando o comando, sempre que o você quiser rodar AWS CLI, tera
 que rodar esse comando do ambiente virtual:
 
-``source venv/bin/activate``
+```bash
+source venv/bin/activate
+```
 
 depois basta instalar awscli de forma isolada para que nao corra risco de 
 conflitos de dependencias.
 
-``pip install awscli``
+```bash
+pip install awscli
+```
 
 Lembre-se de que, sempre que precisar usar a AWS CLI, você primeiro precisará ativar o 
 ambiente virtual usando o comando ``source venv/bin/activate``.
@@ -68,16 +86,21 @@ ambiente virtual usando o comando ``source venv/bin/activate``.
 Após a instalação ser concluída, você pode verificar se a AWS CLI foi instalada corretamente 
 digitando o seguinte comando:
 
-``aws --version``
+```bash
+aws --version
+```
 
 1. Instale o Docker em seu ambiente local, se ainda não estiver instalado.
 2. Baixe e instale o LocalStack usando o Docker Hub. Por exemplo, você pode 
 executar o seguinte comando no terminal:
 
-``docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack``
+```bash
+docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack
+```
 
 Ao executar o comando se ele retornar essas informaçoes signifca que esta roando:
-`
+
+```yaml
 LocalStack version: 2.0.3.dev
 LocalStack build date: 2023-05-06
 LocalStack build git hash: 3e778577
@@ -85,7 +108,7 @@ LocalStack build git hash: 3e778577
 2023-05-09T14:59:48.980  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
 2023-05-09T14:59:48.980  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
 Ready.
-`
+```
 Isso iniciará o contêiner LocalStack e exporá as portas 4566 e 4571,
 que são usadas para acessar os serviços simulados.
 
@@ -95,7 +118,9 @@ com os serviços simulados. Certifique-se de configurar a região para
 
 Por exemplo, para listar os buckets do Amazon S3 usando o AWS CLI:
 
-``aws --endpoint-url=http://localhost:4566 s3 ls``
+```bash
+aws --endpoint-url=http://localhost:4566 s3 ls
+```
 
 Esse comando ira dar erro pois antes temos que configurar aws-cli em nossa maquina. Sigamos ao
 proximo passo.
@@ -104,7 +129,11 @@ proximo passo.
 
 Agora temos que configurar aws-cli antes de utilizalo.
 
-Execute o comando ``aws configure``
+Execute o comando:
+
+```bash
+aws configure
+```
 
 Ele solicitará as seguintes informações:
 
@@ -121,9 +150,17 @@ Ele solicitará as seguintes informações:
 Agora você pode começar a usar a LocalStack para interagir com os serviços da AWS.
 Por exemplo, você pode listar os buckets do Amazon S3 usando o seguinte comando:
 
-Como seria com aws-cli: ``aws s3 ls``
+Como seria com aws-cli: 
 
-Com local-stack: ``aws --endpoint-url=http://localhost:4566 s3 ls``
+```bash
+aws s3 ls
+```
+
+Com local-stack: 
+
+```bash
+aws --endpoint-url=http://localhost:4566 s3 ls
+```
 
 Isso retornará uma lista dos buckets disponíveis na sua conta da AWS.
 
@@ -132,7 +169,9 @@ ser exploradas na documentação oficial da AWS CLI.
 
 Vamos agora criar um bucket para demostração de utilização
 
-``aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket-to-test``
+```bash
+aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket-to-test
+```
 
 Se você quiser pode subistituir o nome "my-bucket-to-test" para nome do bucket que queira.
 
@@ -140,14 +179,20 @@ Ao criar bucket ele retornara a mensagem "make_bucket: my-bucket-to-test" na sai
 
 Agora podemos listar nosso bucket:
 
-``aws --endpoint-url=http://localhost:4566 s3 ls``
+```bash
+aws --endpoint-url=http://localhost:4566 s3 ls
+```
 
-ira retornar "2023-05-09 12:15:00 my-bucket-to-test"
+ira retornar ``"2023-05-09 12:15:00 my-bucket-to-test"``
 
 ## Finish
 
 Lembre-se que sempre ao executar deve se primeiro carregar ambiente vitual e rodar o container:
 
-``source venv/bin/activate``
+```bash
+source venv/bin/activate
+```
 
-``docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack``
+```bash
+docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack
+```
