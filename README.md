@@ -118,7 +118,7 @@ executar o seguinte comando no terminal:
 docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack
 ```
 
-Ao executar o comando se ele retornar essas informaçoes signifca que esta roando:
+Ao executar o comando se ele retornar essas informaçoes significa que esta rodando:
 
 ```yaml
 LocalStack version: 2.0.3.dev
