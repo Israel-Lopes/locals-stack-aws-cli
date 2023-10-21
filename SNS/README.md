@@ -21,13 +21,17 @@ fundamental para a criação de arquiteturas e sistemas resilientes na nuvem.
 
 Vamos aprender a criar nosso. Execute o comando:
 
-``aws sns create-topic --name MyTopic``
+```bash
+aws sns create-topic --name MyTopic
+```
 
 Esse comando foi para criarmos nosso primeiro topico chamado ``MyTopic``.
 
 Agora vamos criar nossa inscrição:
 
-``aws sns subscribe --topic-arn arn:aws:sns:us-east-1:123456789012:MyTopic --protocol email --notification-endpoint my-email@example.com``
+```bash
+aws sns subscribe --topic-arn arn:aws:sns:us-east-1:123456789012:MyTopic --protocol email --notification-endpoint my-email@example.com
+```
 
 A inscrição no topico e um meio de configurar um end pointer para o topico, ou seja, voce
 esta configurando para qual destino as mensagem no topico que chegarem serao enviadas.
@@ -36,14 +40,16 @@ No caso eu configurei para as mensagem serem enviadas para o email ficticio.
 
 Podemos configurar para os seguites destinos:
 
-- E-mail: As notificações são enviadas por e-mail para o endereço de e-mail especificado.
-- SMS: As notificações são enviadas como mensagens de texto para o número de telefone celular especificado.
-- HTTP/HTTPS: As notificações são enviadas como solicitações HTTP POST para o URL especificado.
-- Lambda: As notificações são enviadas para uma função AWS Lambda especificada.
-- Aplicativo móvel: As notificações são enviadas para um aplicativo móvel registrado por meio de serviços como Amazon Pinpoint, Apple Push Notification Service (APNS) ou Firebase Cloud Messaging (FCM).
+- **E-mail:** As notificações são enviadas por e-mail para o endereço de e-mail especificado.
+- **SMS:** As notificações são enviadas como mensagens de texto para o número de telefone celular especificado.
+- **HTTP/HTTPS:** As notificações são enviadas como solicitações HTTP POST para o URL especificado.
+- **Lambda:** As notificações são enviadas para uma função AWS Lambda especificada.
+- **Aplicativo móvel:** As notificações são enviadas para um aplicativo móvel registrado por meio de serviços como Amazon Pinpoint, Apple Push Notification Service (APNS) ou Firebase Cloud Messaging (FCM).
 
 Agora vamos enviar a mensagem para topico encaminha para seu destino:
 
-``aws sns publish --topic-arn arn:aws:sns:us-east-1:123456789012:MyTopic --message "Hello, world!"``
+```bash
+aws sns publish --topic-arn arn:aws:sns:us-east-1:123456789012:MyTopic --message "Hello, world!"
+```
 
 Lembre-se de por a zona correta em seu comando, aqui eu coloquei e apenas um exemplo.
