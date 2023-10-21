@@ -45,7 +45,7 @@
  - python3-pip
  - python3-venv
 
- ## Começando com LocalStack
+ ## Configurando e começando com LocalStack
 
 Para simularmos ambiente da aws de forma local e muito simples, mais primeiro  temos
 que instalar o ***AWS CLI*** sigamos abaixo:
