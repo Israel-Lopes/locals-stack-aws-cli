@@ -16,27 +16,36 @@ sejam entregues pelo menos uma vez a um consumidor.
 Vamos a pratica para configurar nosso SQS. Primerio temos que criar uma fila para isso
 siga o comando abaixo:
 
-``aws sqs create-queue --queue-name MyQueue``
+```bash
+aws sqs create-queue --queue-name MyQueue
+```
 
 Na opcao ***--queue-name*** devemos especifica o nome da nossa fila, no caso coloquei nome
 para teste.
 
 Agora vamos enviar mensagem para fila:
 
-``aws sqs send-message --queue-url <URL_da_Fila> --message-body "Hello, world!"``
+```bash
+aws sqs send-message --queue-url <URL_da_Fila> --message-body "Hello, world!"
+```
 
 Para pegarmos a url da file que criamos, podemos utilizar o comando:
 
-``aws sqs get-queue-url --queue-name MyQueue``
+```bash
+aws sqs get-queue-url --queue-name MyQueue
+```
 
 O comando ira retornar:
-```
+
+```json
 {
     "QueueUrl": "https://sqs.us-east-1.amazonaws.com/123456789012/MyQueue"
 }
 ```
 Agora podemos enviar mensagem para fila:
 
-``aws sqs send-message --queue-url https://sqs.us-east-1.amazonaws.com/123456789012/MyQueue --message-body "Hello, world!"``
+```bash
+aws sqs send-message --queue-url https://sqs.us-east-1.amazonaws.com/123456789012/MyQueue --message-body "Hello, world!"
+```
 
 
