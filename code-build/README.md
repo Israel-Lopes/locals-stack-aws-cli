@@ -15,11 +15,13 @@ AWS CodePipeline para facilitar a configuração de fluxos de trabalho de CI/CD 
 
 Listar os projetos de compilação que existem:
 
-``aws codebuild list-projects``
+```bash
+aws codebuild list-projects
+```
 
 Para criar um novo projeto:
 
-```
+```bash
 aws codebuild create-project \
   --name MyBuildProject \
   --source "type=CODECOMMIT,location=https://git-codecommit.us-east-1.amazonaws.com/v1/repos/MyRepository,sourceVersion=branch-name" \
@@ -29,7 +31,9 @@ aws codebuild create-project \
 ```
 Inicia compilaçao de um projeto existente:
 
-``aws codebuild start-build --project-name MyBuildProject``
+```bash
+aws codebuild start-build --project-name MyBuildProject
+```
 
 Antes de executar o comando ***start-build***, você precisa ter configurado a branch desejada no
 projeto do CodeBuild. Isso pode ser feito ao criar ou atualizar o projeto utilizando o comando 
@@ -40,7 +44,9 @@ Por exemplo, se você deseja iniciar uma compilação na branch "develop" do seu
 "MyBuildProject", certifique-se de que o projeto tenha sido configurado corretamente com a 
 branch correta. Em seguida, você pode iniciar a compilação usando o comando:
 
-``aws codebuild start-build --project-name MyBuildProject``
+```bash
+aws codebuild start-build --project-name MyBuildProject
+```
 
 O CodeBuild usará as configurações do projeto para determinar a branch e iniciar a 
 compilação correspondente.
