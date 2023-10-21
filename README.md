@@ -1,5 +1,23 @@
 # Simulando AWS CLI com LocalStack
 
+"O principal objetivo desta documentação é fornecer um guia passo a passo abrangente para configurar e utilizar o LocalStack, uma ferramenta essencial para simular um ambiente AWS (Amazon Web Services) em seu ambiente de desenvolvimento local. Ao seguir esta documentação, você será capaz de:
+
+1. Simular Ambiente AWS Localmente: Aprender a simular serviços da AWS, como S3, EC2, Lambda, DynamoDB e outros, em seu próprio ambiente de desenvolvimento, economizando custos e evitando a dependência da AWS real durante o desenvolvimento e testes.
+
+2. Configurar Pré-Requisitos: Esta documentação orienta sobre a instalação de ferramentas essenciais, como o AWS CLI, Docker e Python, necessárias para criar um ambiente de simulação eficaz.
+
+3. Executar LocalStack com Docker: Aprender como baixar, configurar e executar o LocalStack com o Docker, garantindo que as portas corretas estejam abertas para acessar os serviços simulados.
+
+4. Configurar o AWS CLI: Configurar o AWS CLI para se conectar ao ambiente LocalStack, permitindo que você emule serviços AWS localmente.
+
+5. Testar e Desenvolver Localmente: Usar o AWS CLI para interagir com os serviços simulados, como listar e criar buckets S3, executar funções Lambda e trabalhar com bancos de dados DynamoDB, tudo localmente.
+
+6. Lembrar das Etapas Importantes: Fornecer lembretes importantes sobre como ativar o ambiente virtual e iniciar o LocalStack para garantir que sua simulação esteja funcionando corretamente.
+
+<br />
+
+## Sumario
+
 1.  [IAM (Identity and Access Management)](IAM/README.md)
 2.  [S3 (Simple Storage Service)](bucket-s3/README.md)
 3.  [EC2 (Elastic Compute Cloud)](EC2/README.md)
@@ -17,13 +35,15 @@
 15. [KMS (Key Management Service)](KMS/README.md)
 16. [Cognito](cognito/README.md)
 
-Dependencias:
+## Dependencias
 
  - AWS CLI
  - Docker
  - Python 2.7.x ou o Python 3.4
  - python3-pip
  - python3-venv
+
+ ## Começando com LocalStack
 
 Para simularmos ambiente da aws de forma local e muito simples, mais primeiro  temos
 que instalar o ***AWS CLI*** sigamos abaixo:
