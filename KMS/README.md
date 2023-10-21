@@ -25,21 +25,31 @@ Vamos agora a alguns exemplo.
 
 Criar uma chave mestra (CMK):
 
-``aws kms create-key``
+```bash
+aws kms create-key
+```
 
 Criptografar um dado usando uma chave mestra:
 
-``aws kms encrypt --key-id <key-id> --plaintext <data-to-encrypt>``
+```bash
+aws kms encrypt --key-id <key-id> --plaintext <data-to-encrypt>
+```
 
 Descriptografar um dado usando uma chave mestra:
 
-``aws kms decrypt --ciphertext-blob <encrypted-data> --key-id <key-id>``
+```bash
+aws kms decrypt --ciphertext-blob <encrypted-data> --key-id <key-id>
+```
 
 Listar as chaves mestras disponíveis:
 
-``aws kms list-keys``
+```bash
+aws kms list-keys
+```
 
 Rotacionar uma chave mestra:
 
-``aws kms enable-key-rotation --key-id <key-id>``
+```bash
+aws kms enable-key-rotation --key-id <key-id>
+```
 
