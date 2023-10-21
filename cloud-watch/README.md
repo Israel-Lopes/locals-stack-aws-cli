@@ -16,7 +16,7 @@ Vamos agora aprender a criar um alarme com Cloud Watch.
 
 Para criar o alarme basta executar:
 
-```
+```bash
 aws cloudwatch put-metric-alarm \
   --alarm-name "MyEC2Alarm" \
   --alarm-description "Alarm for the number of running EC2 instances" \
@@ -36,7 +36,7 @@ aws cloudwatch put-metric-alarm \
 
 Crie o arquivo ``dashboad.json`` e insira o codigo abaixo:
 
-```
+```json
 {
   "widgets": [
     {
@@ -59,7 +59,9 @@ Crie o arquivo ``dashboad.json`` e insira o codigo abaixo:
 ```
 Agora use o comando:
 
-``aws cloudwatch put-dashboard --dashboard-name MyDashboard --dashboard-body file://dashboard.json``
+```bash
+aws cloudwatch put-dashboard --dashboard-name MyDashboard --dashboard-body file://dashboard.json
+```
 
 Neste exemplo, o comando cria ou atualiza um painel de controle chamado "MyDashboard" com um único
 widget de gráfico que exibe a utilização da CPU de uma instância EC2 específica.
