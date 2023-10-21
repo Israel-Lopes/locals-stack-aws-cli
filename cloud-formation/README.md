@@ -20,7 +20,7 @@ Vamos agora aprender a implementalo.
 Primeiro temos que criar nosso arquivo de template, ele quem vai dar as diretrizes de como sera
 a nossa infra. Nome do nosso arquivo sera ``cloudformation-template.yaml``
 
-```
+```yaml
 ---
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Exemplo de template CloudFormation
@@ -73,6 +73,7 @@ Outputs:
     Value: !Ref MyDynamoDBTable
     Description: Nome da tabela DynamoDB
 ```
+
 Este exemplo de arquivo de template cria três recursos: uma instância EC2, um bucket do 
 S3 e uma tabela do DynamoDB.
 
@@ -81,7 +82,7 @@ utilidade de indicar o inicio do documento YAML. Isso garante a interpretação 
 
 Agora com template criado vamos implantar nossa stack:
 
-```
+```bash
 aws cloudformation create-stack \
   --stack-name MyStack \
   --template-body file://$HOME/cloudformation-template.yaml \
@@ -95,10 +96,13 @@ No exemplo dado, duas tags estão sendo adicionadas à pilha:
 A utilização das tags são úteis para fins de categorização, rastreamento de custos, 
 gerenciamento de recursos e aplicação de políticas.
 
-Agora podemos listar nossa stack: ``aws cloudformation describe-stacks ``
+Agora podemos listar nossa stack: 
+
+```bash
+aws cloudformation describe-stacks
+```
 
 Um ponto de atenção, quando criamos nossa stack, automaticamente a CloudFormation provisiona
 todos os nossos recursos que estao no arquivo de template, ou seja, tudo sera criado na hora.
 
 Ficamos por aqui.
-
