@@ -11,12 +11,18 @@ Sigamos a diante agora.
 
 Para subir nosso ambiente simulado da aws faça:
 
-``sudo docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack``
+```bash
+sudo docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack
+```
 
 Vamos criar nosso primeiro ***EC2*** em CLI. Para iniciarmos seguimos etapas 
 descritas na linha abaixo:
 
-Para criar o EC2: ``aws ec2 run-instances --image-id <ami-id> --instance-type <instance-type> --key-name <key-pair-name> --security-group-ids <security-group-id> --subnet-id <subnet-id> --count <number-of-instances>``
+Para criar o EC2:
+
+```bash
+aws ec2 run-instances --image-id <ami-id> --instance-type <instance-type> --key-name <key-pair-name> --security-group-ids <security-group-id> --subnet-id <subnet-id> --count <number-of-instances>
+```
 
 Para executar o comando de criação do EC2, precisamos fornecer detalhes como tipo de imagem
 IAM, numero de instancias, grupo de segurança, chaves de acesso e outras opçoes.
@@ -45,7 +51,8 @@ as imagens disponiveis na AWS: ``aws ec2 describe-images``, observe que ele ira 
 obejto json muito grande com detalhes da arquitetura da imagem.
 
 Exemplo da saida do comando:
-```
+
+```json
 },
         {
             "Architecture": "x86_64",
@@ -82,10 +89,13 @@ Exemplo da saida do comando:
 Agora temos que criar nosso grupo de seguraça, pois e ele quem vai determinar regras de
 entrada e saida. Devemos informar nome do grupo que queremos criar e a descrição dele:
 
-``aws ec2 create-security-group --group-name MyGroupTest --description "group description"``
+```bash
+aws ec2 create-security-group --group-name MyGroupTest --description "group description"
+```
 
 Executando o comando ele retorna algo assim:
-```
+
+```json
 {
     "GroupId": "sg-0937433e1dbd16c91",
     "Tags": []
@@ -98,23 +108,31 @@ Dessa forma sera listado todos os grupos que voce tem.
 Podemos tambem aplicar filtros caso voce saiba o nome do group, nesse caso basta por nome
 do group que acamos de criar:
 
-``aws ec2 describe-security-groups --filters "Name=group-name,Values=MyGroupTest"``
+```bash
+aws ec2 describe-security-groups --filters "Name=group-name,Values=MyGroupTest"
+```
 
 Sigamos em frente.
 
 Vamaos pegar o ***subnet-id***, para isso podemos listalos com seguinte:
 
-``aws ec2 describe-subnets``
+```bash
+aws ec2 describe-subnets
+``````
 
 Podemos aplicar filtros se quisermos tambem:
 
-``aws ec2 describe-subnets --filters "Name=subnet-id,Values=<subnet-id>"``
+```bash
+aws ec2 describe-subnets --filters "Name=subnet-id,Values=<subnet-id>"
+```
 
 Eu irei utilizar como exemplo o id "subnet-b8a4b5ff".
 
 Vamos pegar ***instance-type***, basta fazer o comando para listar:
 
-``aws ec2 describe-instance-types``
+```bash
+aws ec2 describe-instance-types
+```
 
 No retorno o que nos interessa e o campo ***InstanceType***, ele contem o nome da instancia.
 
@@ -124,11 +142,15 @@ ou privadas que sao utilizadas para autenticar o acesso a instancia ***EC2***.
 
 Caso voce ja tenha uma, podemos listala da seguinte maneira:
 
-``aws ec2 describe-key-pairs``
+```bash
+aws ec2 describe-key-pairs
+```
 
 No meu caso nao tenho ainda, nisso terei que criar uma, segue o passo:
 
-``aws ec2 create-key-pair --key-name MyKeyPairTest --output text > MyKeyPairTest.pem``
+```bash
+aws ec2 create-key-pair --key-name MyKeyPairTest --output text > MyKeyPairTest.pem
+```
 
 Isso ira criar uma nova chave de acesso chamada MyKeyPairTest e salvara a chave privada no
 no arquivo MyKeyPairTest.pem, apenas certifique-se de salvala em um local seguro.
@@ -136,7 +158,7 @@ no arquivo MyKeyPairTest.pem, apenas certifique-se de salvala em um local seguro
 Agora que ja coletamos todas as informaçoes necessarias, podemos criar ***EC2***, o meu
 ficou da seguinte maneira:
 
-```
+```bash
 aws ec2 run-instances \
   --image-id "ami-fbc1c684" \
   --instance-type "d3.2xlarge" \
@@ -148,13 +170,19 @@ aws ec2 run-instances \
 Agora basta executar o comando acima para criar nosso primeiro ***EC2***. Proximo passo agora
 e iniciarmos nosso instancia ***EC2***, basta seguir o exemplo abaixo:
 
-``aws ec2 start-instances --instance-ids <instance-id>``
+```bash
+aws ec2 start-instances --instance-ids <instance-id>
+```
 
-Ficando da seguinte maneira: ``aws ec2 start-instances --instance-ids "i-304d1f1933d722ab6"``
+Ficando da seguinte maneira: 
+
+```bash
+aws ec2 start-instances --instance-ids "i-304d1f1933d722ab6"
+```
 
 Esse e o retorno de sucesso que queremos ter:
 
-```
+```json
 {
     "StartingInstances": [
         {
