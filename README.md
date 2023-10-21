@@ -1,3 +1,5 @@
+![image](img/background.png)
+
 # Simulando AWS CLI com LocalStack
 
 "O principal objetivo desta documentação é fornecer um guia passo a passo abrangente para configurar e utilizar o LocalStack, uma ferramenta essencial para simular um ambiente AWS (Amazon Web Services) em seu ambiente de desenvolvimento local. Ao seguir esta documentação, você será capaz de:
