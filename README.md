@@ -26,22 +26,22 @@
 
 ## Sumario
 
-1.  [IAM (Identity and Access Management)](IAM/README.md)
-2.  [S3 (Simple Storage Service)](bucket-s3/README.md)
-3.  [EC2 (Elastic Compute Cloud)](EC2/README.md)
-4.  [Lambda](lambda/README.md)
-5.  [DynamoDB](dynamoDB/README.md)
-6.  [API Gateway](api-gateway/README.md)
-7.  [CloudFormation](cloud-formation/README.md)
-8.  [CloudWatch](cloud-watch/README.md)
-9.  [SQS (Simple Queue Service)](SQS/README.md)
-10. [SNS (Simple Notification Service)](SNS/README.md)
-11. [CodeCommit](code-commit/README.md)
-12. [CodePipeline](code-pipeline/README.md)
-13. [CodeBuild](code-build/README.md)
-14. [CodeDeploy](code-deploy/README.md)
-15. [KMS (Key Management Service)](KMS/README.md)
-16. [Cognito](cognito/README.md)
+1.  [IAM (Identity and Access Management)](pages/IAM/README.md)
+2.  [S3 (Simple Storage Service)](pages/bucket-s3/README.md)
+3.  [EC2 (Elastic Compute Cloud)](pages/EC2/README.md)
+4.  [Lambda](pages/lambda/README.md)
+5.  [DynamoDB](pages/dynamoDB/README.md)
+6.  [API Gateway](pages/api-gateway/README.md)
+7.  [CloudFormation](pages/cloud-formation/README.md)
+8.  [CloudWatch](pages/cloud-watch/README.md)
+9.  [SQS (Simple Queue Service)](pages/SQS/README.md)
+10. [SNS (Simple Notification Service)](pages/SNS/README.md)
+11. [CodeCommit](pages/code-commit/README.md)
+12. [CodePipeline](pages/code-pipeline/README.md)
+13. [CodeBuild](pages/code-build/README.md)
+14. [CodeDeploy](pages/code-deploy/README.md)
+15. [KMS (Key Management Service)](pages/KMS/README.md)
+16. [Cognito](pages/cognito/README.md)
 
 ## Dependencias
 
