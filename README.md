@@ -2,19 +2,25 @@
 
 # Simulando AWS CLI com LocalStack
 
-"O principal objetivo desta documentação é fornecer um guia passo a passo abrangente para configurar e utilizar o LocalStack, uma ferramenta essencial para simular um ambiente AWS (Amazon Web Services) em seu ambiente de desenvolvimento local. Ao seguir esta documentação, você será capaz de:
+### Guia Completo para Configurar e Usar o LocalStack no Ambiente de Desenvolvimento Local
 
-1. Simular Ambiente AWS Localmente: Aprender a simular serviços da AWS, como S3, EC2, Lambda, DynamoDB e outros, em seu próprio ambiente de desenvolvimento, economizando custos e evitando a dependência da AWS real durante o desenvolvimento e testes.
+1. **Simular Ambiente AWS Localmente**
+   - Aprender a simular serviços da AWS, como S3, EC2, Lambda, DynamoDB e outros, em seu próprio ambiente de desenvolvimento, economizando custos e evitando a dependência da AWS real durante o desenvolvimento e testes.
 
-2. Configurar Pré-Requisitos: Esta documentação orienta sobre a instalação de ferramentas essenciais, como o AWS CLI, Docker e Python, necessárias para criar um ambiente de simulação eficaz.
+2. **Configurar Pré-Requisitos**
+   - Esta documentação orienta sobre a instalação de ferramentas essenciais, como o AWS CLI, Docker e Python, necessárias para criar um ambiente de simulação eficaz.
 
-3. Executar LocalStack com Docker: Aprender como baixar, configurar e executar o LocalStack com o Docker, garantindo que as portas corretas estejam abertas para acessar os serviços simulados.
+3. **Executar LocalStack com Docker**
+   - Aprender como baixar, configurar e executar o LocalStack com o Docker, garantindo que as portas corretas estejam abertas para acessar os serviços simulados.
 
-4. Configurar o AWS CLI: Configurar o AWS CLI para se conectar ao ambiente LocalStack, permitindo que você emule serviços AWS localmente.
+4. **Configurar o AWS CLI**
+   - Configurar o AWS CLI para se conectar ao ambiente LocalStack, permitindo que você emule serviços AWS localmente.
 
-5. Testar e Desenvolver Localmente: Usar o AWS CLI para interagir com os serviços simulados, como listar e criar buckets S3, executar funções Lambda e trabalhar com bancos de dados DynamoDB, tudo localmente.
+5. **Testar e Desenvolver Localmente**
+   - Usar o AWS CLI para interagir com os serviços simulados, como listar e criar buckets S3, executar funções Lambda e trabalhar com bancos de dados DynamoDB, tudo localmente.
 
-6. Lembrar das Etapas Importantes: Fornecer lembretes importantes sobre como ativar o ambiente virtual e iniciar o LocalStack para garantir que sua simulação esteja funcionando corretamente.
+6. **Lembrar das Etapas Importantes**
+   - Fornecer lembretes importantes sobre como ativar o ambiente virtual e iniciar o LocalStack para garantir que sua simulação esteja funcionando corretamente.
 
 <br />
 
